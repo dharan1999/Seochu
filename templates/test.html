@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <link rel='stylesheet' href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/s1.css">
+         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
+          <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
+       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+       <script src='static/js/s2.js'></script>
+       <link rel="shortcut icon" type="image/png" href="static/images/SEO3.png">
+    </head>
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#" style="color: white;font-size: 250%;font-family: 'Permanent Marker', cursive;"><img src="static/images/SEO3.png" style="padding-right: 10px;">Seochu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <!-- <span class="navbar-toggler-icon"></span> -->
+                  <i class="fa fa-bars"></i>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('index')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">SERVICES</a>
+                    </li>
+                     <li class="nav-item">
+                              <a class="nav-link" href="{{url_for('test')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">SCRAPPY !</a>
+                     </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-link"  href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">ABOUT US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;"> TESTIMONIALS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">FIND US</a>
+                    </li>
+                           
+                    
+                  </ul>
+                 
+                </div>
+              </nav>
+
+
+</section>
+<section id="search1">
+    <main>
+        <div class="container">
+            <h1 style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Wanna Know your Blog Analysis?</h1>
+            <h2 style="font-family: 'Changa', sans-serif;font-size: 15px;">Try Below!</h2>
+            <div class="search-box" >
+                <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+                <form method= "post" action="/web_scrap" class="search-form">
+                   
+                   <input type="text" name="raw_url" placeholder="Enter the URL" id="search" autocomplete="off">
+
+                  <!--  <button class='btn btn-small waves-effect waves-light purple lighten-1' type="submit">Test</button> -->
+                    
+
+                </form>
+                <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;"
+                 xml:space="preserve">
+              <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280"/>
+              <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3-23.7-53-53-53h-280"/>
+            </svg>
+                <div class="go-icon"><i class="fa fa-arrow-right"><button id="searchbutton" type="submit" ></button></i></div>
+            </div>
+            <div class="magic">
+            <h2 class="ma1">Behold the Magic<i class="fa fa-magic"  id ="be1" aria-hidden="true"></i></h2>
+        </div>
+        </div>
+    
+
+
+   
+     </main>
+
+    </section>
+    <!-- Displaying the result -->
+
+    
+     <section id='footer'>
+        <img src='static/images/wave2.png' class='footer-img'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-6 footer-box'>
+                    <img src='static/images/SEO3.png'>
+                        
+    
+                </div>
+                <div class='col-md-6 footer-box' style="padding-left: 120px">
+                        <p style="font-family: 'Changa', sans-serif;"><b>Contact US</b></p>
+                        <p style="font-family: 'Changa', sans-serif;"><i class='fa fa-map-marker'></i>Charusat University, Changa</p>
+                        <p style="font-family: 'Changa', sans-serif;" ><i class='fa fa-phone'></i>+91 786534561</p>
+                        <p style="font-family: 'Changa', sans-serif;"><i class='fa fa-envelope-o'></i>dharanthakar96@gmail.com</dharanthakar9@gmail></p>
+                    </div>
+    
+                    <!-- <div class='col-md-4 footer-box '>
+                            <p><b>SUBSCRIBE NEWSLETTER </b></p>
+                            <input type="email" class='form-control' placeholder="Your Email">
+                            <button type="button" class='btn btn-primary' >Subscribe</button>
+                        </div> -->
+            </div>
+            <hr>
+            <p class='copyright' style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Website crafted by Dharan Thaker</p>
+        </div>
+    </section>
+    <script src='static/js/smooth-scroll.js'></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+   
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

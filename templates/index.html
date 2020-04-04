@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Seochu</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   <link rel="shortcut icon" type="image/png" href="static/images/SEO3.png">
+   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
+</head>
+
+<body><div class="navbar-fixed">
+
+   <nav class="navbar navbar-dark bg-secondary" role="navigation" >
+    <div class="nav-wrapper container"> 
+      <a id="logo-container" href="#" class="brand-logo" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Seochu Summarizer</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Home</a></li>
+         <li><a href="{{url_for('test')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Scrap it!</a></li>
+         <li><a href="{{url_for('compare_summary')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Compare Summarizers</a></li>
+         <li><a href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">About</a></li>
+      </ul>
+
+      
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+	<ul id="nav-mobile" class="sidenav">
+        <li><a href="{{url_for('about')}}"  style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Home</a></li>
+
+         <li><a href="{{url_for('test')}}"  style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Scrap it!</a></li>
+         <li><a href="{{url_for('compare_summary')}}"  style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Compare</a></li>
+         <li><a href="{{url_for('about')}}"  style="font-family: 'Permanent Marker', cursive;font-weight:normal;">About</a></li>
+      </ul>
+<!--Slider -->
+ <section class="slider">
+  <div id="index-banner" class="parallax-container">
+     <ul class="slides">
+      <li>
+        <img src="backgroundblue.png" alt="Unsplashed background img 1" alt="">
+        <div class="caption center-align">
+          <h2  style="font-family: 'Permanent Marker', cursive;font-weight:normal;color: black;">Summarization Simplified</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only" style="font-family: 'Changa', sans-serif;">
+           Using SpaCy,Gensim,NLTK and Sumy
+          </h5>
+         
+           <div class="row center">
+          <a href="{{url_for('index')}}" id="download-button" class="btn-large waves-effect waves-light blue lighten-1" style="font-family: 'Changa', sans-serif;">Refresh</a>
+        </div>
+        </div>
+      </li>
+      <li>
+       <img src="backgroundpurple.png" alt="Unsplashed background img 1">
+        <div class="caption left-align">
+          <h2  style="font-family: 'Permanent Marker', cursive;font-weight:normal;color: black;">Text Summarizer with SpaCy</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only" style="font-family: 'Changa', sans-serif;">
+           NLP based App
+          </h5>
+          <a href="about.html" class="btn btn-large waves-effect waves-light light-blue lighten-1">Learn More</a>
+        </div>
+      </li>
+   
+    </ul>
+  </div>
+</section>
+
+<!-- Start of Main Section -->
+ <div class="container">
+    <div class="section">
+       
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="input-field col s12 m10">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">chrome_reader_mode</i></h2>
+           <form method="POST" action="/analyze">
+         <textarea name="rawtext" cols="3" rows="5" class="form-control" required="true" placeholder="Enter Text Here"></textarea>
+          
+         <br/>
+         <button class="btn btn-small waves-effect waves-light light-blue lighten-1" type="reset">Clear</button>
+          <button class="btn btn-small waves-effect waves-light purple lighten-1" type="submit">Summarize</button>
+          
+        </form>
+          </div>
+        </div>
+
+      </div>
+
+        <div class="row">
+        <div class="input-field col s12 m10">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">chrome_reader_mode</i></h2>
+           <form method="POST" action="/analyze_url">
+         <input type="text" name="raw_url" placeholder="Enter URL Here" required="true">
+         <button class="btn btn-small waves-effect waves-light light-blue lighten-1" type="reset">Clear</button>
+          <button class="btn btn-small waves-effect waves-light purple lighten-1" type="submit">Summarize</button>
+          
+        </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- End -->
+
+  <!-- Result Display-->
+  <section class="section section-solutions-about grey darken-2">
+ <div class="container white-text">
+ 
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Your Text</h5>
+             <p>Reading Time: <span style="color:#0091EA;">{{ final_reading_time }} min </span></p>
+            <p class="light">{{ctext}}</p>
+            <div class="alert alert-info" role="alert"><p>Time Elapsed: <span style="color:#0091EA;">{{ final_time }} mins </span></p><br/>
+             
+        </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 grey darken-3">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">chrome_reader_mode</i></h2>
+            <h5 class="center" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Summarized</h5>
+              <div class="" role="alert">
+              <p>Reading Time: <span style="color:#0091EA;">{{ summary_reading_time }} min </span></p>
+        </div>
+            <p class="light">{{ final_summary }}</p>
+          
+          </div>
+        </div>
+
+      </div>
+
+  
+  </div>
+</section>
+
+
+<div class="container grey">
+  <div class="row">
+
+  <h1 style="text-align: center; color: black; font-family: 'Permanent Marker', cursive;font-weight:normal;" >
+    BACKLINK GENERATION
+    
+  </h1>
+  
+
+  <h5 style="text-align: center; color: black; font-family: 'Changa', sans-serif; ">
+    The Backlink Generation is done with the help of the Ubersuggest website.
+    <a href="https://neilpatel.com/ubersuggest/" style="color: red">GO TO WEBSITE </a>
+    and Paste the URL of the website.
+
+  </h5>
+  </div>
+  
+
+  
+
+</div>
+  
+  <footer class="page-footer grey darken-4">
+    <div class="container" id="aboutapp">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"  style="font-family: 'Permanent Marker', cursive;font-weight:normal;">About Seochu Summarizer App</h5>
+          <p class="grey-text text-lighten-4">You can use it to add the summarized data into the  meta tag content attribute </p>
+
+
+        </div>
+      
+   <div class="col l3 s12">
+          <h5 class="white-text"  style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Connect With Me</h5>
+          <ul>
+            <a href="https://www.facebook.com/dharanthaker/" target="_blank" class="white-text">
+            <i class="fab fa-facebook fa-4x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dharan-thaker-05b96b15a/" target="_blank" class="white-text">
+            <i class="fab fa-linkedin fa-4x"></i>
+          </a>
+          <a href="https://www.instagram.com/dharan_12__/" target="_blank" class="white-text">
+            <i class="fab fa-instagram fa-4x"></i>
+          </a>
+           <a href="https://github.com/dharan1999" target="_blank" class="white-text">
+            <i class="fab fa-github-square fa-4x"></i>
+          </a>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  
+
+
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/init.js"></script>
+<!-- Jesse JCharis -->
+  </body>
+</html>

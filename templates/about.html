@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title> Seochu </title>
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="static/images/SEO3.png">
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
+        <style>
+            @font-face{
+                font-family: "dharan";
+                src:url(dharan.TTF).format('truetype');
+            }
+        </style>
+    </head>
+    <body>
+        <section id="nav-bar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="#" style="color: white;font-size: 250%;font-family: 'Permanent Marker', cursive;"><img src="static/images/SEO3.png" style="padding-right: 10px;">Seochu</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <!-- <span class="navbar-toggler-icon"></span> -->
+                          <i class="fa fa-bars"></i>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{url_for('about')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">HOME </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{{url_for('index')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">SERVICES</a>
+                            </li>
+                             <li class="nav-item">
+                              <a class="nav-link" href="{{url_for('test')}}" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">SCRAPPY !</a>
+                            </li>
+                    
+                            <li class="nav-item">
+                              <a class="nav-link" href="#about-us" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">ABOUT US</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonials" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">TESTIMONIALS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer" style="font-family: 'Permanent Marker', cursive;font-weight:normal;">FIND US</a>
+                            </li>
+                                   
+                            
+                          </ul>
+                         
+                        </div>
+                      </nav>
+
+
+        </section>
+            <!-- banner section -->
+
+            <section id="banner">
+                <div class = "container">
+                  <div class = "row">
+                  <div class="col-md-6">
+                      <p class = "promo-title" style="font-family: 'Permanent Marker', cursive;font-weight:normal;font-size: 250%"> Let your SEO do the talking!</p>
+                      <p style="font-family: 'Lobster', cursive;"> >> Seochu is an NLP powered web service which helps your website improve its SEO ranking.</p>
+                        <a href="#" ><img src="static/images/play4.png" class="play-btn">Watch the Tutorial</a>
+                  </div>
+                        <div class="col-md-5-5 ">
+                                <img src="static/images/banner4.png" class="img-fluid" style="padding-left: 50px;">
+                         </div>
+                        
+                    </div>
+                  </div>  
+                  <img src='static/images/wave1.png' class="bottom-img">
+                </div>
+
+                
+
+            </section>
+
+            <!-- services section -->
+            <section id='services'>
+                <div class='container text-center'>
+                    <h1 class='title' style="font-family: 'Permanent Marker', cursive;font-weight:normal;">Our Services  </h1>
+                 <div class='row text-center'>
+                     <div class='col-md-4 services '>
+                         <img src='static/images/keywords.png' class='services-img'>
+                        <h4 style="font-size: 22px;font-weight: bold;"> Scrappy</h4>
+                        <p style="font-family: 'Changa', sans-serif;font-size: 20px;"> Scrappy crawls through your entire website and gives you the insights of the HTML data, which upon clicking can render you the required measures to be taken to improve the SEO</p>
+                     </div>
+
+                     <div class='col-md-4 services '>
+                            <img src='static/images/keywords.png' class='services-img'>
+                           <h4 style="font-size: 22px;font-weight: bold;"> Seochu Summarizer</h4>
+                           <p style="font-family: 'Changa', sans-serif;font-size: 20px;">The Seochu Summarizer tool summarizes the entire website and provide the summarized paragraph which can be included in the Meta description tag of the website</p>
+                        </div>
+
+                        <div class='col-md-4 services '>
+                                <img src='static/images/keywords.png' class='services-img'>
+                               <h4 style="font-size: 22px;font-weight: bold;">Backlinks Suggestions</h4>
+                               <p style="font-family: 'Changa', sans-serif;font-size: 20px;">Backlink Suggestion tool by Neil Patel does the hard work for you and renders the required backlinks for the websites.</p>
+                        </div>
+                 </div> 
+                     <button type='button' class='btn btn-primary' style="font-family: 'Changa', sans-serif;" onclick="location.href = '{{url_for('test')}}' ">All Services</button>   
+                </div>
+            </section>
+            <!-- about us -->
+            <section id='about-us'>
+                <div class='container'>
+                     <h1 class='title text-center' style="font-family: 'Permanent Marker', cursive;">Why Choose US ?</h1>
+                        <div class='row'>
+                            <div class='col-md-6 about us'>
+                                <p class='about-title' >What Makes Us Different?</p>
+                                <ul style="font-size: 25px;font-family: 'Changa', sans-serif;">
+                                    <li>We Provide a full-fledged dynamic solution to improve SEO</li>
+                                    <li>Copy the URL and Enter -- It's that easy </li>
+                                    <li>Summarize your entire website within seconds and get meaningful insights with Seochu Summarizer </li>
+                                    <li> Scrap your website with Seochu Scrappy tool and click on the scrapped data to get ways to improve your SEO</li>
+                            
+                                </ul>
+                            </div>
+                            <div class='col-md-6'>
+                                <img src='static/images/one.png' class='img-fluid'>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+            </section>
+<!-- Testimonials -->
+<section id='testimonials'> 
+    <div class='container'>
+        <h1 class='title text-center' style="font-family: 'Permanent Marker', cursive;">
+            Creators
+
+        </h1>
+        <div class='row offset-1'>
+            <div class='col-md-4 testimonials'>
+                <!-- <p>
+                    hello Seochu 
+                </p> -->
+                <img src='static/images/Varun.png'>
+                <p class='user-details' style="  display: inline-block;font-size: 18px;font-family: 'Changa', sans-serif;"><b>Varun Shembakar</b><br> Back-end Developer</p>
+                <div class='social-icons'>
+                        <a href='https://www.facebook.com/varun.shembekar'><img src='static/images/facebook.png'></a>
+                        <a href='https://www.instagram.com/varunshembekar/'><img src='static/images/Instagram.png'></a>
+                        <a href='#'><img src='static/images/snapchat.png'></a>
+                        <a href='#'><img src='static/images/twitter.png'></a>
+                        <a href='https://www.linkedin.com/in/varun-shembekar-470755192/'><img src='static/images/Linkedin.png'></a>
+                       
+                    </div>
+            </div>
+
+            <div class='col-md-4 testimonials'>
+                    <!-- <p>
+                        hello Seochu 
+                    </p>
+                     --><img src='static/images/Dharan1.jpeg'>
+                    <p class='user-details' style="  display: inline-block;font-size: 18px;font-family: 'Changa', sans-serif;"><b>Dharan Thaker</b><br>Project Lead</p>
+                    <div class='social-icons'>
+                            <a href='https://www.facebook.com/dharan.thakar'><img src='static/images/facebook.png'></a>
+                            <a href='https://www.instagram.com/dharan_12__/'><img src='static/images/Instagram.png'></a>
+                            <a href='https://www.snapchat.com/add/dharan_thaker'><img src='static/images/snapchat.png'></a>
+                            <a href='https://twitter.com/Join_The_Run'><img src='static/images/twitter.png'></a>
+                            <a href='https://www.linkedin.com/in/dharan-thaker-05b96b15a/'><img src='static/images/Linkedin.png'></a>
+                           
+                        </div>
+                </div>
+
+                <div class='col-md-4 testimonials'>
+                     <!--    <p>
+                            hello Seochu 
+                        </p>
+                      -->   <img src='static/images/Paurav.png'>
+                        <p class='user-details' style="  display: inline-block;font-size: 18px;font-family: 'Changa', sans-serif;"><b>Paurav Thakkar</b><br> Front-end Developer</p>
+                        <div class='social-icons'>
+                                <a href='https://www.facebook.com/paurav.thakkar'><img src='static/images/facebook.png'></a>
+                                <a href='https://www.instagram.com/paurav__thakkar/'><img src='static/images/Instagram.png'></a>
+                                <a href='#'><img src='static/images/snapchat.png'></a>
+                                <a href='#'><img src='static/images/twitter.png'></a>
+                                <a href='https://www.linkedin.com/in/paurav-thakkar-37aa67192/'><img src='static/images/Linkedin.png'></a>
+                               
+                            </div>
+                    </div>
+        </div>
+    </div>
+</section>
+
+</section> -->
+    <!-- Footer section -->
+<section id='footer'>
+    <img src='static/images/wave2.png' class='footer-img'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-6 footer-box'>
+                <img src='static/images/SEO3.png' >
+                   
+
+            </div>
+            <div class='col-md-6 footer-box' style="padding-left: 120px">
+                    <p style="font-family: 'Changa', sans-serif;"><b>Contact US</b></p>
+                    <p style="font-family: 'Changa', sans-serif;"><i class='fa fa-map-marker'></i>Charusat University, Changa</p>
+                    <p style="font-family: 'Changa', sans-serif;"><i class='fa fa-phone'></i>+91 786534561</p>
+                    <p style="font-family: 'Changa', sans-serif;"><i class='fa fa-envelope-o'></i>dharanthakar96@gmail.com</dharanthakar9@gmail></p>
+                </div>
+
+              
+        </div>
+        <hr>
+        <p class='copyright' style="font-family: 'Permanent Marker', cursive;">Website crafted by Dharan Thaker</p>
+    
+    </div>
+
+ 
+
+</section>
+<!-- Smooth Scroll -->
+<script src='static/js/smooth-scroll.js'></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+        </body>
+</html>
