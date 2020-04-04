@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 
+	<title>result</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="static/images/SEO3.png">
+
+	  <style type="text/css">
+	  	#head{
+	  		background-image: linear-gradient(to right,#a517ba,#5f1782);
+	  	}
+	  	#hline{
+	  		border: 2px solid black;
+	  		width: 90%;
+	  	}
+
+	  </style>
+
+</head>
+<body>
+<section>
+	<div id='head'>
+	<h2 style="align-items: center;text-align: center;color: white;font-family: 'Permanent Marker', cursive;font-weight:normal;"><b> Scraped Data! </b></h2>
+	  <footer class="blockquote-footer" style="align-items: right;text-align:right;color: white"> {{ raw_url }}</footer>
+	</div>
+	<div class="container">
+	
+	<table style="border: 10px solid black">
+		
+
+<tr>
+<div class='container'>
+	
+	<p style="font-family: 'Permanent Marker', cursive; font-weight:normal;"><h3><b>Page title:</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='{{rawtitle}}' data-content='Should not exceed 65 characters in length. Words must relate to the content on the page and should be ordered from left-to-right with the most important, relevant words appearing first. Only 1 title tag per page. But make sure you have one!' style="color: black">{{ rawtitle }}</a></p>
+<br>	
+<hr id="hline">
+</div>
+</tr>
+
+<tr>
+	<div class='container'>
+		
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><h3><b>H1 Tag:</b></h3></p> <br>
+	<p><a href='#' data-toggle='popover' title='{{rawh1}}' data-content="Tells Google the main theme of the page. Only 1 H1 per page. Should support the page title and properly summarize the page content.But make sure you have one!
+
+	We also look for 3 keywords in common with the Title tag.
+	
+	SEO experts will tell you that H1 tags are not necessary... and guess what? He is Correct. When there is no H1 tag on the page,Google will assume that your heading is most likely the larger-font/bolded/underlined sentence on the top of your page.And let's face it,for most pages,that is correct.
+
+	Here's the problem:Most web pages are really poorly formatted,which means there could be confusion.And who wants that?
+
+	That's why we recommend the use of H1 tags. For the great majority of websites,it's just an easier approach.	" style="color: black">{{ rawh1 }}</a></p>
+		
+	</div>
+<br>
+<hr id="hline">
+ </tr>
+ <tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><h3><b>H2 Tag:</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='Popover header' data-content='Some content inside' style="color: black">{{ rawh2 }}</a></p>
+	
+</div>
+<br>
+<hr id="hline">
+</tr>
+<tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><b><h3>Links:</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title="Internal and External Links" data-content="Our analysis shows both the anchor text and the title of each hyperlink on the page.
+
+	The Anchor text is the website,clickable text in a hyperlink which commonly appears as blue,underlined text. The title tag is usually the text that appears when you hover the link.
+	
+	Google uses the anchor text to further its understanding of the page you're linking to. Title tags are not an SEO element,per se,as Google does not use hyperlinks titles in its web ranking algorithm any longer and in fact,may penalize you for titles containing an overabundance of keywords.
+	However, from a human usability(UI) perspective,titles can help your visitor's understanding of the link and where they'll end up if they do click the link.This is especially beneficial for image links.	" style="color: black">{{ rawlinks }}</a></p>
+	
+</div>
+<br>
+<hr id="hline">
+</tr>
+<tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><b><h3>Meta Information:</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='Meta description information' data-content='Try not to exceed 160 characters, if possible. Why? In most cases, when Google lists your web page in a search result, Google lists your web page in a search result, Google places your description tag underneath the page title. If it is longer than 160 characters, it will get truncated. Only 1 description tag per page. But make sure you have one!
+
+	While Page Description is Not an SEO item, it can help "sell" the benefits of clicking your link on the search results page. And Since the goal is to increase traffic to your site,we included Page Description in the score.' style="color: black">
+		{%for i in range(0,len)%}
+		{{rawmeta[i]}}
+		{%endfor%}
+	</a>
+	</p>
+
+
+</div>
+<br>
+<hr id="hline">
+</tr>
+
+<tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><b><h3>Meta Information1:</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='Popover header' data-content='Some content inside' style="color: black">
+	
+
+		{{ rawmeta1 }}
+	</a>	
+	</p>
+
+
+</div>
+<br>
+<hr id="hline">
+</tr>
+
+
+<tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><h3><b>Paragraphs:</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='Popover header' data-content='Some content inside' style="color: black">{{ rawp }}</a></p>
+	
+</div>
+</tr>
+<br>
+<hr id="hline">
+<tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><h3><b>Tables</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='Tables Detected' data-content='Websites using table elements load measureably slower than those based on div elements.Google now includes page loads-times in its ranking algorithm formula. Slow sites take a hit.Bottom-line: Avoid tables if at all possible.' style="color: black">{{ rawtables }}</a></p>
+	
+</div>
+</tr>
+<br>
+
+<hr id="hline">
+<tr>
+<div class='container'>
+	
+	<p  style="font-family: 'Permanent Marker', cursive;font-weight:normal;"><h3><b>Text-emphasis</b></h3></p><br>
+	<p><a href='#' data-toggle='popover' title='Bold,Italics and Underlined Detected' data-content='We Summarize the percentage of content on this page that has been emphasized(bold,italics,underline). When you emphasize words,Google tends to interpret this as an indication of which words on this page are important.It is a good idea to kepp this percentage between 1-3%,but use yuor best judgement.If your content density score=0,we note this as a caution because we believe every page should have at least a few words bolded or underlined for emphasis.' style="color: black">{{ rawbold }}</a></p>
+	
+</div>
+</tr>
+<br>
+
+
+
+</div>
+</section>
+</table>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>
+</body>
+</html>
